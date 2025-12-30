@@ -4,6 +4,26 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    
+    <!-- NuGet Package Metadata -->
+    <PackageId>GroqApiClient</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>pweight</Authors>
+    <Company>pweight</Company>
+    <Description>A .NET client library for the Groq AI API. Provides a simple and efficient way to interact with Groq's ultra-fast LLM inference endpoints, supporting chat completions, streaming responses, function calling, and more.</Description>
+    <PackageTags>groq;ai;llm;api;client;chat;completions;openai;inference;streaming</PackageTags>
+    <PackageProjectUrl>https://github.com/pweight/GroqApiClient</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pweight/GroqApiClient</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Copyright (c) 2025 pweight</Copyright>
+    <PackageReleaseNotes>Initial release with support for chat completions, streaming, and model listing.</PackageReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
 
 </Project>
