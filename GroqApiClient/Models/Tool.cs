@@ -39,7 +39,9 @@ public class FunctionDefinition
 
     /// <summary>
     /// The parameters the function accepts, as a JSON Schema object.
+    /// This should be a dictionary representing a JSON Schema with properties like "type", "properties", and "required".
+    /// Example: new Dictionary&lt;string, object&gt; { ["type"] = "object", ["properties"] = new Dictionary&lt;string, object&gt; { ... } }
     /// </summary>
     [JsonPropertyName("parameters")]
-    public object? Parameters { get; set; }
+    public Dictionary<string, object>? Parameters { get; set; }
 }

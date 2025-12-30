@@ -138,11 +138,14 @@ public class GroqClient : IGroqClient
         }
 
         using var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
-        using var reader = new StreamReader(stream);
+        using var reader = new StreamReader(stream, System.Text.Encoding.UTF8);
 
         while (!reader.EndOfStream && !cancellationToken.IsCancellationRequested)
         {
             var line = await reader.ReadLineAsync();
+            
+            if (cancellationToken.IsCancellationRequested)
+                break;
             
             if (string.IsNullOrWhiteSpace(line))
                 continue;

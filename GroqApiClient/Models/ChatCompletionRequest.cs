@@ -8,6 +8,11 @@ namespace GroqApiClient.Models;
 public class ChatCompletionRequest
 {
     /// <summary>
+    /// Default model to use for chat completions.
+    /// </summary>
+    public const string DefaultModel = "llama3-8b-8192";
+
+    /// <summary>
     /// The messages to generate completions for.
     /// </summary>
     [JsonPropertyName("messages")]
@@ -17,7 +22,7 @@ public class ChatCompletionRequest
     /// The model to use for the completion.
     /// </summary>
     [JsonPropertyName("model")]
-    public string Model { get; set; } = "llama3-8b-8192";
+    public string Model { get; set; } = DefaultModel;
 
     /// <summary>
     /// Sampling temperature between 0 and 2. Higher values make output more random.

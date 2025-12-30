@@ -26,25 +26,25 @@ public class Usage
     public int TotalTokens { get; set; }
 
     /// <summary>
-    /// Time spent in the prompt queue (Groq-specific).
+    /// Time spent in the prompt queue in seconds (Groq-specific).
     /// </summary>
     [JsonPropertyName("queue_time")]
     public double? QueueTime { get; set; }
 
     /// <summary>
-    /// Time spent processing the prompt (Groq-specific).
+    /// Time spent processing the prompt in seconds (Groq-specific).
     /// </summary>
     [JsonPropertyName("prompt_time")]
     public double? PromptTime { get; set; }
 
     /// <summary>
-    /// Time spent generating the completion (Groq-specific).
+    /// Time spent generating the completion in seconds (Groq-specific).
     /// </summary>
     [JsonPropertyName("completion_time")]
     public double? CompletionTime { get; set; }
 
     /// <summary>
-    /// Total time for the request (Groq-specific).
+    /// Total time for the request in seconds (Groq-specific).
     /// </summary>
     [JsonPropertyName("total_time")]
     public double? TotalTime { get; set; }
